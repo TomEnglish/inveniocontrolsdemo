@@ -297,27 +297,63 @@ h3 { font-size: 1.25rem; font-weight: 700; }
   background: var(--color-surface);
   border-top: 1px solid var(--color-line);
   border-bottom: 1px solid var(--color-line);
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
 }
 
-.stack h2 { color: var(--color-text-muted); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; }
-
-.stack-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem 2rem;
-  max-width: var(--max-w);
+.stack h2 {
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
 }
 
-.stack-list li {
-  font-weight: 600;
-  color: var(--color-text);
+.stack-lede {
+  color: var(--color-text-muted);
+  margin: 0 0 3rem;
+  font-size: 1rem;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.stack-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.75rem 1rem;
+  background: var(--color-canvas);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.stack-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-line-strong);
+}
+
+.stack-card img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.stack-name {
+  font-weight: 700;
   font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.stack-caption {
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+  letter-spacing: 0.02em;
 }
 
 /* ─── Contact ─────────────────────────────────────────────────────────── */
