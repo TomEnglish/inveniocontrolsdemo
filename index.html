@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>ProjectControls — by Invenio Technologies</title>
+    <meta
+      name="description"
+      content="ProjectControls by Invenio Technologies — material tracking and project visibility for energy and industrial teams. One workspace for setup, progress, change management, and earned-value reporting."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="/" class="brand">
+        <img src="/brand/invenio-mark.svg" alt="" width="32" height="32" />
+        <span>
+          <span class="brand-name">Invenio Technologies</span>
+          <span class="brand-mark">ProjectControls</span>
+        </span>
+      </a>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#tour">Tour</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="https://invenioprojectcontrols.netlify.app">Open the app →</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Invenio Technologies · ProjectControls</p>
+        <h1>One workspace for project controls — from baseline to closeout.</h1>
+        <p class="lede">
+          Material tracking and project visibility for energy and industrial teams.
+          Lock budgets, track field progress, manage change orders, and report earned
+          value on the same data — without the spreadsheet handoffs.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="https://invenioprojectcontrols.netlify.app">Open the live demo</a>
+          <a class="btn btn-outline btn-lg" href="#tour">See the pages</a>
+        </div>
+        <ul class="hero-bullets">
+          <li><strong>Six-role hierarchy</strong> — super_admin, admin, pm, pc_reviewer, editor, viewer</li>
+          <li><strong>Project-scoped admins</strong> via project membership</li>
+          <li><strong>Earned-value math</strong> via Rules of Credit milestones, not guesswork</li>
+        </ul>
+      </div>
+      <div class="hero-shot">
+        <img src="/screenshots/dashboard.png" alt="Invenio ProjectControls Dashboard" />
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+    <section id="features" class="features">
+      <h2>What it does</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>Setup</h3>
+          <p>
+            Project shells, COA library, Rules of Credit templates, per-discipline weights,
+            user invites, foreman aliases, project membership.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Execution</h3>
+          <p>
+            Baseline lock, weekly progress imports (CSV/Excel), drawing-level grid with
+            milestone tracking, IWP and foreman filters, period snapshots.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Change management</h3>
+          <p>
+            Three-stage workflow — submit, PC review, PM approve. Hours impact rolls into
+            current and forecast budgets.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Earned value &amp; reports</h3>
+          <p>
+            CPI, SPI, S-curve, period close, variance analysis, snapshot comparison.
+            All sourced from the same canonical progress records.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+    <section id="tour" class="tour">
+      <h2>The pages</h2>
+      <p class="section-lede">A walkthrough of every screen in the app.</p>
+
+      <article class="tour-page">
+        <div class="tour-text">
+          <span class="tour-tag">Overview</span>
+          <h3>Executive Dashboard</h3>
+          <p>
+            Five live KPIs at the top — overall earned percent, earned hours, CPI, SPI,
+            and a composite percent computed from per-discipline weights. Below: an
+            earned-value-by-discipline chart, an S-curve tracking planned vs earned vs
+            actual hours across reporting periods, and a discipline summary table.
+          </p>
+        </div>
+        <figure class="tour-shot">
+          <img src="/screenshots/dashboard.png" alt="Dashboard" />
+        </figure>
+      </article>
+
+      <article class="tour-page">
+        <div class="tour-text">
+          <span class="tour-tag">Setup</span>
+          <h3>Project Setup</h3>
+          <p>
+            One project at a time. Disciplines, ROC templates, per-discipline weights,
+            tenant users and invites, foreman aliases. Admins manage projects they're
+            members of; super_admins manage all projects in the tenant.
+          </p>
+        </div>
+        <figure class="tour-shot">
+          <img src="/screenshots/projects.png" alt="Project Setup" />
+        </figure>
+      </article>
+
+      <article class="tour-page">
+        <div class="tour-text">
+          <span class="tour-tag">Setup</span>
+          <h3>COA &amp; Unit Rates</h3>
+          <p>
+            Tenant-wide chart of accounts library. Codes, descriptions, unit-of-measure,
+            base rate, productivity factor adjustment, and effective PF rate. Imports
+            via xlsx; edits flow through an audit-logged RPC.
+          </p>
+        </div>
+        <figure class="tour-shot">
+          <img src="/screenshots/coa.png" alt="COA & Unit Rates" />
+        </figure>
+      </article>
+
+      <article class="tour-page">
+        <div class="tour-text">
+          <span class="tour-tag">Setup</span>
+          <h3>Rules of Credit</h3>
+          <p>
+            Per-discipline milestone templates with weights summing to 1.0. Drives the
+            earned-percent calculation across every progress record. Versioned —
+            historical baselines reference the template revision in effect at lock time.
+          </p>
+        </div>
+        <figure class="tour-shot">
+          <img src="/screenshots/roc.png" alt="Rules of Credit" />
+        </figure>
+      </article>
+
+      <article class="tour-page">
+        <div class="tour-text">
+          <span class="tour-tag">Execution</span>
+          <h3>Budget &amp; Baseline</h3>
+          <p>
+            Three-budget model — Original (locked at baseline), Current (Original +
+            approved COs), Forecast (Current + pending COs). Once locked, discipline
+            budgets are read-only; scope changes flow through Change Management.
+          </p>
+        </div>
+        <figure class="tour-shot">
+          <img src="/screenshots/budget.png" alt="Budget & Baseline" />
+        </figure>
+      </article>
+
+      <article class="tour-page">
+        <div class="tour-text">
+          <span class="tour-tag">Execution</span>
+          <h3>Progress &amp; Earned Value</h3>
+          <p>
+            Drawing-level grid for every progress record on the project. Multi-select
+            chip filters across discipline, IWP, foreman, type, size, spec; free-text
+            line-area search. Eight milestones per record; earned percent computes live.
+          </p>
+        </div>
+        <figure class="tour-shot">
+          <img src="/screenshots/progress.png" alt="Progress grid" />
+        </figure>
+      </article>
+
+      <article class="tour-page">
+        <div class="tour-text">
+          <span class="tour-tag">Execution</span>
+          <h3>Universal Upload</h3>
+          <p>
+            CSV or Excel. Wide alias map covers most field-tracker exports — drawing,
+            description, hours, percent, foreman, IWP, milestones, attribute columns.
+            Uploads create a weekly snapshot for later comparison. Template provided
+            for first-time users.
+          </p>
+        </div>
+        <figure class="tour-shot">
+          <img src="/screenshots/upload.png" alt="Universal upload" />
+        </figure>
+      </article>
+
+      <article class="tour-page">
+        <div class="tour-text">
+          <span class="tour-tag">Execution</span>
+          <h3>Period Snapshots</h3>
+          <p>
+            Frozen captures of project state — first-audit baseline, then weekly. Two
+            radio columns let you pick A and B; the comparison card shows per-record
+            drift in earned percent and earned hours between captures. Green = forward
+            progress, red = regression.
+          </p>
+        </div>
+        <figure class="tour-shot">
+          <img src="/screenshots/snapshots.png" alt="Period snapshots" />
+        </figure>
+      </article>
+
+      <article class="tour-page">
+        <div class="tour-text">
+          <span class="tour-tag">Execution</span>
+          <h3>Change Management</h3>
+          <p>
+            Three-stage CO workflow — editor submits, PC reviewer forwards or rejects,
+            PM approves or rejects. Hours impact rolls into current and forecast
+            budgets immediately. Audit-logged at every transition.
+          </p>
+        </div>
+        <figure class="tour-shot">
+          <img src="/screenshots/changes.png" alt="Change management" />
+        </figure>
+      </article>
+
+      <article class="tour-page">
+        <div class="tour-text">
+          <span class="tour-tag">Analytics</span>
+          <h3>Earned Value</h3>
+          <p>
+            Drill-down view. Top KPI band (Earned %, Total Earned, Total Budget, CPI,
+            SPI), per-discipline budget vs earned vs actual chart, and a top-20 records
+            table sorted by earned-hours delta — surfaces the biggest gaps to
+            investigate.
+          </p>
+        </div>
+        <figure class="tour-shot">
+          <img src="/screenshots/earned-value.png" alt="Earned Value" />
+        </figure>
+      </article>
+
+      <article class="tour-page">
+        <div class="tour-text">
+          <span class="tour-tag">Analytics</span>
+          <h3>Discipline Progress</h3>
+          <p>
+            One card per active discipline. Earned, actual, and CPI stats, plus
+            horizontal bars for earned-vs-budget and actual-vs-budget. Actual-vs-budget
+            turns red when actuals exceed plan.
+          </p>
+        </div>
+        <figure class="tour-shot">
+          <img src="/screenshots/disciplines.png" alt="Discipline progress" />
+        </figure>
+      </article>
+
+      <article class="tour-page">
+        <div class="tour-text">
+          <span class="tour-tag">Analytics</span>
+          <h3>Reports</h3>
+          <p>
+            Cost variance, schedule variance, forecast at completion. CPI/SPI trend
+            chart per locked period. Period Close card to lock the open period — closes
+            the books, freezes BCWP/ACWP, seeds the next period. Variance analysis
+            table per discipline.
+          </p>
+        </div>
+        <figure class="tour-shot">
+          <img src="/screenshots/reports.png" alt="Reports" />
+        </figure>
+      </article>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+    <section id="stack" class="stack">
+      <h2>Built on</h2>
+      <ul class="stack-list">
+        <li>React 19 · TypeScript · Vite</li>
+        <li>Supabase Postgres · RLS · Edge Functions</li>
+        <li>TanStack Query · Zustand</li>
+        <li>Chart.js · Tailwind v4</li>
+        <li>pgTAP for schema tests · Vitest for frontend</li>
+      </ul>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+    <section id="contact" class="contact">
+      <div class="contact-inner">
+        <div class="contact-text">
+          <h2>Get in touch</h2>
+          <p class="section-lede">
+            Tell us about your project and we'll set up a demo. Response within
+            one business day.
+          </p>
+          <ul class="contact-meta">
+            <li>
+              <span class="contact-label">Email</span>
+              <a href="mailto:info@invenio-tek.com">info@invenio-tek.com</a>
+            </li>
+            <li>
+              <span class="contact-label">Sales</span>
+              <a href="mailto:hello@invenio-tek.com">hello@invenio-tek.com</a>
+            </li>
+            <li>
+              <span class="contact-label">Based in</span>
+              <span>Houston, Texas</span>
+            </li>
+          </ul>
+        </div>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="contact-form"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hp-field">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <label>
+            <span>Name <span class="req">*</span></span>
+            <input type="text" name="name" required />
+          </label>
+
+          <label>
+            <span>Email <span class="req">*</span></span>
+            <input type="email" name="email" required />
+          </label>
+
+          <label>
+            <span>Company</span>
+            <input type="text" name="company" />
+          </label>
+
+          <label>
+            <span>Message <span class="req">*</span></span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-lg">Send message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div>© 2026 Invenio Technologies</div>
+      <div>
+        <a href="mailto:info@invenio-tek.com">info@invenio-tek.com</a>
+        ·
+        <a href="https://invenioprojectcontrols.netlify.app">Live app</a>
+        ·
+        <a href="https://github.com/TomEnglish/InvProjectControls1">Source</a>
+      </div>
+    </footer>
+  </body>
+</html>

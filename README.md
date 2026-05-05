@@ -1,0 +1,28 @@
+# Invenio Technologies — ProjectControls site
+
+Single-page marketing site for [ProjectControls](https://invenioprojectcontrols.netlify.app), a product of Invenio Technologies.
+
+## Local preview
+
+```bash
+npm run dev          # python3 -m http.server 5500
+# open http://localhost:5500
+```
+
+No build step — pure HTML/CSS, deploys as-is.
+
+## Capture screenshots
+
+The 12 pages of the app shown in `index.html` need real screenshots. The `screenshots.js` script logs into the live app, walks every route, and writes PNGs into `./screenshots/`.
+
+```bash
+npm install
+npx playwright install chromium
+APP_EMAIL=you@example.com APP_PASSWORD='…' npm run screenshots
+```
+
+Re-run any time the UI changes.
+
+## Deploy
+
+This repo is a static site; Netlify auto-publishes `.` on every push. Connect the repo in Netlify dashboard, no build settings needed (the `netlify.toml` declares an empty build command).
