@@ -47,7 +47,7 @@ mkdirSync(OUT_DIR, { recursive: true });
 const browser = await chromium.launch();
 const context = await browser.newContext({
   viewport: { width: 1440, height: 900 },
-  deviceScaleFactor: 2, // retina-quality screenshots
+  deviceScaleFactor: 3, // 4320×2700 source — sharp on any display
 });
 const page = await context.newPage();
 
