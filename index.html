@@ -22,6 +22,7 @@
       </a>
       <nav>
         <a href="#features">Features</a>
+        <a href="#video">Video tour</a>
         <a href="#tour">Tour</a>
         <a href="#stack">Stack</a>
         <a href="#contact">Contact</a>
@@ -40,7 +41,7 @@
         </p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg" href="https://invenioprojectcontrols.netlify.app">Open the live demo</a>
-          <a class="btn btn-outline btn-lg" href="#tour">See the pages</a>
+          <a class="btn btn-outline btn-lg" href="#video">Watch the tour</a>
         </div>
         <ul class="hero-bullets">
           <li><strong>Six-role hierarchy</strong> — super_admin, admin, pm, pc_reviewer, editor, viewer</li>
@@ -86,6 +87,30 @@
           </p>
         </div>
       </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+    <section id="video" class="video-tour">
+      <h2>Full app tour</h2>
+      <p class="section-lede">
+        A ~90-second walkthrough of every sidebar route — sign-in, navigation, in-page actions,
+        and tap indicators. Captured from the live app with Playwright and rendered with HyperFrames.
+      </p>
+      <figure class="video-shell">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+          poster="/screenshots/dashboard.png"
+          aria-label="Invenio ProjectControls full app tour video"
+        >
+          <source src="/video/invenio-project-controls-full-tour.mp4" type="video/mp4" />
+          Your browser does not support embedded video.
+        </video>
+        <figcaption>
+          Desktop capture · 1920×1080 · 53 screens · sidebar navigation and in-page interactions
+        </figcaption>
+      </figure>
     </section>
 
     <!-- ─────────────────────────────────────────────────────────────────── -->
